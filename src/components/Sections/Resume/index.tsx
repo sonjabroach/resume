@@ -1,10 +1,10 @@
 import {FC, memo} from 'react';
 
-import {experience, execsummary, SectionId} from '../../../data/data';
+import {execsummary, experience, SectionId} from '../../../data/data';
 import Section from '../../Layout/Section';
+import ExeclineItem from './ExeclineItem';
 import ResumeSection from './ResumeSection';
 import TimelineItem from './TimelineItem';
-import ExeclineItem from './ExeclineItem';
 
 const Resume: FC = memo(() => {
   return (

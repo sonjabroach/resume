@@ -1,9 +1,6 @@
 import {
-  AcademicCapIcon,
   ArrowDownTrayIcon,
-  BuildingOffice2Icon,
   CalendarIcon,
-  FlagIcon,
   MapIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
@@ -15,11 +12,11 @@ import {
   About,
   ContactSection,
   ContactType,
+  ExeclineItem,
   Hero,
   HomepageMeta,
   Social,
   TimelineItem,
-  ExeclineItem,
 } from './dataDef';
 
 /**
