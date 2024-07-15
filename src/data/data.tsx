@@ -60,7 +60,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '../images/resume.pdf',
+      href: 'public/assets/resume.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -111,18 +111,6 @@ export const experience: TimelineItem[] = [
       </p>
     ),
   },
-   {
-    date: 'March 2018 - April 2023',
-    location: 'VillageMD',
-    title: 'Director of Engineering',
-    content: (
-      <p>
-        - Delivered innovative, consumer-grade applications for clinical staff and patients through Salesforce Health Cloud. 
-        - Managed 15 person team of Managers and Developers. 
-        - Health cloud, Sales cloud, Marketing cloud
-      </p>
-    ),
-  },
   {
     date: 'July 2017 - February 2018',
     location: 'XO Group (The Knot.com)',
@@ -135,7 +123,7 @@ export const experience: TimelineItem[] = [
     ),
   },
   {
-    date: 'July 2014 - 2017',
+    date: 'July 2010 - 2017',
     location: 'Braintree/Paypal and Groupon',
     title: 'Engineering Manager, Platform Manager',
     content: (
