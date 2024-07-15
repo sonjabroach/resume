@@ -60,7 +60,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '../images/resume.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -257,5 +257,5 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/sonjarbroach/'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/sonjabroach/'},
 ];
