@@ -82,7 +82,7 @@ export const aboutData: About = {
   aboutItems: [
     {label: 'Location', text: 'Greater Chicagoland area', Icon: MapIcon},
     {label: 'Age', text: '42', Icon: CalendarIcon},
-    {label: 'Interests', text: 'Art, books, holistic health', Icon: SparklesIcon},
+    {label: 'Interests', text: 'Art, books, holistic health, family, travel, making music with my husband, and of course - business and tech! ', Icon: SparklesIcon},
   ],
 };
 
