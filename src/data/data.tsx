@@ -23,8 +23,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Sonja Broach - Engineering Leader',
+  description: "Distinguished technologist and engineering leader with 2 decades in Salesforce platform",
 };
 
 /**
