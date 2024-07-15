@@ -8,36 +8,18 @@ import {
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
-import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
-import testimonialImage from '../images/testimonial.webp';
 import {
   About,
   ContactSection,
   ContactType,
   Hero,
   HomepageMeta,
-  PortfolioItem,
-  SkillGroup,
   Social,
-  TestimonialSection,
   TimelineItem,
+  ExeclineItem,
 } from './dataDef';
 
 /**
@@ -55,11 +37,9 @@ export const SectionId = {
   Hero: 'hero',
   About: 'about',
   Contact: 'contact',
-  Portfolio: 'portfolio',
   Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
-  Testimonials: 'testimonials',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -69,18 +49,15 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Sonja Broach.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Chicago based <strong className="text-stone-100">Salesforce Engineering leader</strong>. I have spent 
+        <strong className="text-stone-100"> 18 years</strong> building full-stack applications and CRM implementations across industries spanning green energy, fintech, health care, and commerce. 
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        I am looking for my next role at a company where I can be deeply involved in the <strong className="text-stone-100">success and direction of the product</strong>, deliver strong <strong className="text-stone-100">business outcomes</strong>, and contribute to a <strong className="text-stone-100">stellar culture</strong>.  
       </p>
     </>
   ),
@@ -104,231 +81,154 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `In my free time time, you can find me reading, painting, working in my garden, or playing with my 3 kids and Boston Terrier. `,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Greater Chicagoland area', Icon: MapIcon},
+    {label: 'Age', text: '42', Icon: CalendarIcon},
+    {label: 'Interests', text: 'Art, books, holistic health', Icon: SparklesIcon},
   ],
 };
 
-/**
- * Skills section
- */
-export const skills: SkillGroup[] = [
-  {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
-    ],
-  },
-];
-
-/**
- * Portfolio section
- */
-export const portfolioItems: PortfolioItem[] = [
-  {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
-  },
-  {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage2,
-  },
-  {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage3,
-  },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
-];
-
-/**
- * Resume section -- TODO: Standardize resume contact format or offer MDX
- */
-export const education: TimelineItem[] = [
-  {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'April 2023 - June 2024',
+    location: 'Sunrun, Inc',
+    title: 'Director of Engineering, Salesforce Platform',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+       - Lead a dual-instance transformation and north star re-architecture. 
+       - Managed 100 person team spanning Managers, Engineering, Technical Architecture, DevOps/Infrastructure, Administration, Analyst, Manual and Automated Testing, and Solution Architecture functions.
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'March 2018 - April 2023',
+    location: 'VillageMD',
+    title: 'Director of Engineering',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        - Delivered innovative, consumer-grade applications for clinical staff and patients through Salesforce Health Cloud. 
+        - Managed 15 person team of Managers and Developers.
+        - Sales cloud, Service cloud, Field Service lightning
+      </p>
+    ),
+  },
+   {
+    date: 'March 2018 - April 2023',
+    location: 'VillageMD',
+    title: 'Director of Engineering',
+    content: (
+      <p>
+        - Delivered innovative, consumer-grade applications for clinical staff and patients through Salesforce Health Cloud. 
+        - Managed 15 person team of Managers and Developers. 
+        - Health cloud, Sales cloud, Marketing cloud
+      </p>
+    ),
+  },
+  {
+    date: 'July 2017 - February 2018',
+    location: 'XO Group (The Knot.com)',
+    title: 'Director of Engineering',
+    content: (
+      <p>
+        - Led team of 15 Salesforce administrators and developers, data engineers, and product managers in service of publishing and supporting content, ad sales, and support for theknot.com pre-acquisition.
+        - Sales cloud 
+      </p>
+    ),
+  },
+  {
+    date: 'July 2014 - 2017',
+    location: 'Braintree/Paypal and Groupon',
+    title: 'Engineering Manager, Platform Manager',
+    content: (
+      <p>
+        - Led teams ranging 5-25 people 
+        - Sales cloud, Service cloud, large scale, heavily integrated 
+      </p>
+    ),
+  },
+  {
+    date: '2007 - 2010',
+    location: 'Cars.com',
+    title: 'Software Engineer',
+    content: (
+      <p>
+        - Built and supported foundational Salesforce application in Sales and Service clouds
+        - Proposed and won bid to build in-house CPQ functionality and led scrum team through agile transformation process to a completed product.
       </p>
     ),
   },
 ];
 
-/**
- * Testimonial section
- */
-export const testimonial: TestimonialSection = {
-  imageSrc: testimonialImage,
-  testimonials: [
-    {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
-  ],
-};
+export const execsummary: ExeclineItem[] = [
+  {
+    title: 'Why am I looking?',
+    content: (
+      <p>
+      I was part of a recent leadership restructuring decision at Sunrun.
+      </p>
+    ),
+  },
+  {
+    title: 'Distinguished',
+    content: (
+      <p>
+      I have worked across varying tech stacks in distributed, complex, and data-heavy architectures, but my deep experience lies in Salesforce and the Force.com platform.  I have worked deeply with Sales, Service, Health, and Experience Clouds, with more limited experience in Field Service Lightning and Marketing cloud. I have seen large scale issues and dealt with major performance improvements. 
+      </p>  
+    ),
+  },
+  {
+    title: 'Data-oriented',
+    content: (
+      <p>
+       I have worked on all kinds of integrations spanning point-to-point Apex, middleware, and MuleSoft.   
+       Also have experience with MsSQL, PostgresSQL, Snowflake, and Tableau.
+      </p>  
+    ),
+  },
+  {
+    title: 'Grit',
+    content: (
+      <p>
+        I thrive as a hands on vision-painter, solution / technical / data architect, and get hands on when needed.
+      </p>  
+    ),
+  },
+  {
+    title: 'Versatile',
+    content: (
+      <p>
+        As an engineering leader I have supported large (100) and small teams (5), creating transparent career architecture and strengthening engineering culture.  I have managed senior managers, technical architects, test automation leaders, and senior engineers.  I am accustomed to a high-growth, fast-paced environment where priorities change frequently.  
+      </p>  
+    ),
+  },
+  {
+    title: 'People-oriented',
+    content: (
+      <p>
+       I invest in my teams and team culture and the careers of individuals.  I believe in creating transparency and being candid so people know where they stand and how to  move their career forward.  I have experience creating staffing strategies of all kinds with permanent, staff augmented, and consultant type employees.  
+      </p>  
+    ),
+  },
+  {
+    title: 'Partnerships and Business Strategy',
+    content: (
+      <p>
+       I work with business partners at all levels including the c-team to envision and communicate long term solution and capability roadmaps, system implementations, and design process automation alongside business partners to translate the business needs into technical design.  
+      </p>  
+    ),
+  },
+  {
+    title: 'North-star vision',
+    content: (
+      <p>
+      I build for quality and longevity with guiding principles that a team can rally around when architecting solutions, including a focus on testing and test automation, strong observability practices, and playbooks for responding to issues.  
+      </p>  
+    ),
+  },
+
+];
 
 /**
  * Contact section
@@ -336,27 +236,22 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Feel free to reach out to me.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'sonjabroach@gmail.com',
+      href: 'mailto:sonjabroach@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Greater Chicagoland',
+      href: 'https://www.google.ca/maps/place/Chicago+Metropolitan+Area/@41.697771,-89.2576692,8z/data=!3m1!4b1!4m6!3m5!1s0x880e444c8c99e083:0xda7b840a9a579334!8m2!3d41.7435073!4d-88.0118473!16zL20vMDF3NjVz?entry=ttu',
     },
     {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
-    },
-    {
-      type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      type: ContactType.Phone,
+      text: '(847) 505-3500',
+      href: 'tel:847-505-3500',
     },
   ],
 };
@@ -365,9 +260,5 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/sonjarbroach/'},
 ];

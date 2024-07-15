@@ -68,21 +68,6 @@ export interface Skill {
   max?: number;
 }
 
-export interface SkillGroup {
-  name: string;
-  skills: Skill[];
-}
-
-/**
- * Portfolio section
- */
-export interface PortfolioItem {
-  title: string;
-  description: string;
-  url: string;
-  image: string | StaticImageData;
-}
-
 /**
  * Resume section
  */
@@ -93,18 +78,9 @@ export interface TimelineItem {
   content: JSX.Element;
 }
 
-/**
- * Testimonial section
- */
-export interface TestimonialSection {
-  imageSrc?: string | StaticImageData;
-  testimonials: Testimonial[];
-}
-
-export interface Testimonial {
-  image?: string;
-  name: string;
-  text: string;
+export interface ExeclineItem {
+  title: string;
+  content: JSX.Element;
 }
 
 /**
@@ -120,11 +96,7 @@ export const ContactType = {
   Email: 'Email',
   Phone: 'Phone',
   Location: 'Location',
-  Github: 'Github',
   LinkedIn: 'LinkedIn',
-  Facebook: 'Facebook',
-  Twitter: 'Twitter',
-  Instagram: 'Instagram',
 } as const;
 
 export type ContactType = (typeof ContactType)[keyof typeof ContactType];
